@@ -52,23 +52,29 @@ export function PerfectCitation() {
           {citations.map((citation, index) => (
             <div 
               key={index}
-              className="group transition-all duration-300 hover:bg-white hover:bg-opacity-5 rounded-lg p-4"
+              className="group transition-all duration-300 hover:bg-white rounded-lg p-4 cursor-pointer"
             >
               <div className="flex justify-between items-start gap-4">
                 <div className="flex-1">
                   <div 
-                    className="font-['Inter'] text-sm mb-2 opacity-70"
+                    className="font-['Inter'] text-sm mb-2 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
                     style={{ color: 'var(--color-accent-sky)' }}
                   >
                     {citation.label}
                   </div>
                   <div 
-                    className="font-['Inter'] leading-relaxed"
+                    className="font-['Inter'] leading-relaxed transition-colors duration-300"
                     style={{ 
-                      color: 'var(--color-bg-white)',
+                      color: 'rgba(255, 255, 255, 0.9)',
                       fontFamily: citation.label.includes('Boilerplate') 
                         ? 'Inter, sans-serif' 
                         : 'Courier New, monospace'
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = 'var(--color-primary-navy)';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = 'rgba(255, 255, 255, 0.9)';
                     }}
                   >
                     {citation.value}
