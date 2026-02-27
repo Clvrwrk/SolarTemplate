@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { McKinneyHero } from '../components/mckinney/McKinneyHero';
 import { ProblemSolution } from '../components/mckinney/ProblemSolution';
 import { EnvironmentalChallenges } from '../components/mckinney/EnvironmentalChallenges';
+import { LocalSpotlight } from '../components/shared/LocalSpotlight';
 import { ReliableServices } from '../components/mckinney/ReliableServices';
 import { ProtectingInvestment } from '../components/mckinney/ProtectingInvestment';
 import { MaintenanceChecklist } from '../components/mckinney/MaintenanceChecklist';
@@ -180,6 +181,17 @@ export default function McKinney() {
       <McKinneyHero />
       <ProblemSolution />
       <EnvironmentalChallenges />
+      <LocalSpotlight 
+        city="McKinney, TX"
+        neighborhood="Stonebridge Ranch"
+        imageUrl="https://images.unsplash.com/photo-1765924168599-70090fa7365b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzdWJ1cmJhbiUyMGhvbWUlMjBzb2xhciUyMHBhbmVscyUyMFRleGFzfGVufDF8fHx8MTc3MjIxMjU4NXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+        imageAlt="Residential solar panel cleaning in Stonebridge Ranch, McKinney Texas"
+        yieldPercentage={18}
+        panelCount={24}
+        issueResolved="HOA"
+        problemParagraph="This McKinney homeowner noticed a sharp spike in their utility bill during the peak of the Texas summer. The culprit? A thick layer of baked-on construction dust and spring pollen that had essentially suffocated the solar array's light transmittance. Combined with strict HOA aesthetic standards, the homeowner was facing both financial loss and potential compliance issues."
+        solutionParagraph="Our certified technicians deployed our 6-step standard operating procedure, utilizing multi-stage Reverse Osmosis filtration and deionized water systems. We lifted the abrasive particulate matter safely using soft-bristle brushes and low-pressure techniques, restoring the panels to a spot-free, factory-grade finish. The result: 18% yield recovery, HOA compliance, and secured ROI for the homeowner."
+      />
       <ReliableServices />
       <ProtectingInvestment />
       <MaintenanceChecklist />
